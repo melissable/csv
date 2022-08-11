@@ -5,7 +5,13 @@ For test --> change this in dev.exs or local.exs which is can be imported
 CHANGETHISTOYOURPROJECTDIRECTORY
 
 So that the test can read the test csv file
-I created
+I created, and it is located in the `priv/static` directory and is called `employeeList.csv`
+
+## Also, there is a selenium JS recording as well
+
+
+
+************************************
 
 
 To start your Phoenix server:
