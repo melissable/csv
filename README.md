@@ -1,5 +1,13 @@
 # CSVParser
 
+For test --> change this in dev.exs or local.exs which is can be imported
+
+CHANGETHISTOYOURPROJECTDIRECTORY
+
+So that the test can read the test csv file
+I created
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

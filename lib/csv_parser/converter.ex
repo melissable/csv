@@ -34,40 +34,6 @@ defmodule CSVParser.Converter do
     end)
   end
 
-  # CSV example
-  # def request_list_to_csv(list_of_maps, timezone) do
-  #   header_row = ~w(created_at request_id requested_delivery_date created_by_user_full_name status_name
-  #   origin destination trailer_unit_number trailer_content in_blue_bin_count in_pallet_count
-  #   in_gaylord_count out_blue_bin_count out_pallet_count out_gaylord_count out_large_item_count percent_full number_of_donations
-  #   donation_description)
-  #   list_of_maps
-  #   |> Enum.map(fn r -> [
-  #       to_display_format(r.inserted_at, timezone),
-  #       r.id,
-  #       to_date_display_format(r.requested_delivery_on),
-  #       "#{r.user.first_name} #{r.user.last_name}",
-  #       r.status.name,
-  #       (if(is_nil(r.from_location), do: "", else: r.from_location.name)), 
-  #       (if(is_nil(r.to_location), do: "", else: r.to_location.name)),
-  #       (if(is_nil(r.trailer), do: "", else: r.trailer.unit_number)),
-  #       (if(is_nil(r.required_content_type), do: "", else: r.required_content_type.name)),
-  #       (if(is_nil(r.in_blue_bin_count), do: "", else: r.in_blue_bin_count)),
-  #       (if(is_nil(r.in_pallet_count), do: "", else: r.in_pallet_count)),
-  #       (if(is_nil(r.in_gaylord_count), do: "", else: r.in_gaylord_count)),
-  #       (if(is_nil(r.out_blue_bin_count), do: "", else: r.out_blue_bin_count)),
-  #       (if(is_nil(r.out_pallet_count), do: "", else: r.out_pallet_count)),
-  #       (if(is_nil(r.out_gaylord_count), do: "", else: r.out_gaylord_count)),
-  #       (if(is_nil(r.out_large_item_count), do: "", else: r.out_large_item_count)),
-  #       (if(is_nil(r.percent_full), do: "", else: r.percent_full)),
-  #       (if(is_nil(r.number_of_donations), do: "", else: r.number_of_donations)),
-  #       (if(is_nil(r.donation_description), do: "", else: r.donation_description))
-  #     ] end)
-  #   # add a header row
-  #   |> (fn data_list_of_list -> [header_row | data_list_of_list] end).()
-  #   |> CSVParser.dump_to_iodata()
-  #   |> :unicode.characters_to_binary(:utf8, {:utf16, :little})
-  # end
-
   def to_x_or_blank(nil), do: nil
   def to_x_or_blank(b) when is_boolean(b), do: if(b, do: "X", else: "")
 end

@@ -4,7 +4,8 @@ config :csv_parser,
   app_name: "CSV Parser",
   environment: :dev,
   dev_user_id: 1,
-  signing_salt: "/PZh9W5ua8mHBrkAeP2rdTh0KXYx78ytE9N1O8tPfDiNRR6vmKD22waPNBuGcUAH"
+  signing_salt: "/PZh9W5ua8mHBrkAeP2rdTh0KXYx78ytE9N1O8tPfDiNRR6vmKD22waPNBuGcUAH",
+  test_csv_path: "C:/projects/able/leviticus/csv_parser/priv/static/employeeList.csv"
 
 config :csv_parser, CSVParserWeb.Endpoint,
   secret_key_base: "LmEMD+XS9ll13w9JnqeTvXjkxvg5dbuBcSDoSrakpbSzTQU9F6h6mompHWbNUl+D",

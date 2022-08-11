@@ -54,6 +54,8 @@ config :csv_parser, CSVParserWeb.Endpoint,
 # configured to run both http and https servers on
 # different ports.
 
+config :csv_parser,
+  test_csv_path: "CHANGETHISTOYOURPROJECTDIRECTORY/csv_parser/priv/static/employeeList.csv"
 # Watch static and templates for browser reloading.
 config :csv_parser, CSVParserWeb.Endpoint,
   live_reload: [
